@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך חיסון HPV - כל מה שצריך לדעת</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #37352f;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .page-header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .emoji-icon {
+            font-size: 1.5em;
+            margin-left: 10px;
+        }
+        
+        .section {
+            background: #ffffff;
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #37352f;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .subsection-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            color: #37352f;
+        }
+        
+        .info-box {
+            background: #f7f6f3;
+            border-right: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-right: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .alert-box {
+            background: #f8d7da;
+            border-right: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .kupot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .kupah-card {
+            background: white;
+            border: 2px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .kupah-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .kupah-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #37352f;
+        }
+        
+        .kupah-phone {
+            font-size: 1.1em;
+            color: #667eea;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        
+        .kupah-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .kupah-link:hover {
+            background: #764ba2;
+        }
+        
+        .timeline {
+            margin: 25px 0;
+            padding-right: 30px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 30px;
+            border-right: 3px solid #667eea;
+        }
+        
+        .timeline-item::before {
+            content: '●';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            color: #667eea;
+            font-size: 1.5em;
+        }
+        
+        .timeline-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content {
+            background: #f7f6f3;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .facts-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .facts-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f7f6f3;
+            border-right: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .facts-list li strong {
+            color: #667eea;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .template-box {
+            background: #e7f3ff;
+            border: 2px dashed #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .template-box h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .template-text {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+        
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #fff59d 50%);
+            font-weight: 600;
+        }
+        
+        .statistics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .kupot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1><span class="emoji-icon">💉</span> מדריך חיסון HPV מקיף</h1>
+        <p>כל המידע שאתם צריכים על חיסון HPV - לנשים ולגברים</p>
+    </div>
+
+    <!-- מידע כללי -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">📋</span> מה זה HPV ולמה זה חשוב?</h2>
+        
+        <div class="alert-box">
+            <h3><span class="emoji-icon">⚠️</span> זה לא רק לנשים!</h3>
+            <p><strong>HPV זה לא רק עניין של נשים.</strong> בשנים האחרונות יש עלייה משמעותית במקרי סרטן הקשורים ל-HPV בקרב גברים, במיוחד סרטן הלוע והפה.</p>
+            <p style="margin-top: 10px;"><strong>למה החיסון הורחב לגילאי 18-26?</strong></p>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>רק כ-55% מהתלמידים בישראל מתחסנים נגד HPV בבתי הספר (לפי נתוני התנועה לחופש המידע, ינואר 2025)</li>
+                <li>במדינות כמו אוסטרליה, פורטוגל וספרד - שיעורי החיסון מעל 90%!</li>
+                <li>קיימים פערים גדולים בין יישובים, בין מרכז לפריפריה, ובין אוכלוסיות שונות</li>
+                <li>לכן הוחלט להרחיב את הזכאות עד גיל 26 - כדי לאפשר "השלמה" ולהגן על כמה שיותר אנשים</li>
+            </ul>
+        </div>
+        
+        <p><strong>Human Papillomavirus (HPV)</strong> הוא נגיף נפוץ מאוד המועבר במגע מיני. רוב האנשים נדבקים בו בשלב כלשהו בחייהם, אך במקרים מסוימים הוא עלול להוביל למחלות חמורות.</p>
+        
+        <h3 class="subsection-title">מחלות הקשורות ל-HPV:</h3>
+        <ul class="facts-list">
+            <li><strong>בנשים:</strong> סרטן צוואר הרחם, סרטן הנרתיק, סרטן הפות, יבלות באזור המין</li>
+            <li><strong>בגברים:</strong> סרטן הלוע והפה (הנפוץ ביותר!), סרטן פי הטבעת, סרטן הפין, יבלות באזור המין</li>
+            <li><strong>בשני המינים:</strong> סרטן הפה והלוע - <span class="highlight">בעלייה משמעותית בשנים האחרונות!</span></li>
+        </ul>
+        
+        <div class="warning-box" style="margin-top: 20px;">
+            <h4><span class="emoji-icon">⚠️</span> חשוב לדעת!</h4>
+            <p><strong>קונדום לא מגן באופן מלא מפני HPV.</strong> הנגיף יכול להימצא באזורי עור באזור המין שאינם מכוסים על ידי הקונדום, ולכן מועבר במגע עור-בעור באזור האברים המיניים.</p>
+            <p style="margin-top: 10px; font-weight: 600;">החיסון הוא הדרך היעילה ביותר להגנה מפני HPV!</p>
+            <p style="margin-top: 10px; font-size: 0.95em;">
+                💡 <strong>אבל שימו לב:</strong> החיסון מגן רק מפני HPV - עדיין חשוב להשתמש בקונדום למניעת מחלות מין אחרות והריון.
+            </p>
+        </div>
+        
+        <div class="statistics">
+            <div class="stat-card">
+                <div class="stat-number">1 מתוך 3</div>
+                <div class="stat-label">גברים בעולם נדבקים ב-HPV (31%)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1 מתוך 5</div>
+                <div class="stat-label">גברים נדבקים בזני HPV בסיכון גבוה (21%)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80%</div>
+                <div class="stat-label">מהאנשים הפעילים מינית נחשפים ל-HPV בחייהם</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- החיסון -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">💊</span> אודות החיסון - גרדסיל 9</h2>
+        
+        <div class="success-box">
+            <h3><span class="emoji-icon">✅</span> החיסון הזמין בישראל</h3>
+            <p><strong>גרדסיל 9 (Gardasil 9)</strong> - החיסון היחיד הזמין כיום בישראל, מגן מפני 9 זני HPV:</p>
+            <ul>
+                <li>7 זני "סיכון גבוה": 16, 18, 31, 33, 45, 52, 58</li>
+                <li>2 זני "סיכון נמוך": 6, 11 (הגורמים ליבלות)</li>
+            </ul>
+            <p style="margin-top: 15px; font-size: 0.95em; color: #555;">
+                <strong>חשוב לדעת:</strong> קיימים למעלה מ-200 זני HPV, כאשר 12 מהם מוגדרים כ"סיכון גבוה". 
+                החיסון מגן מפני הזנים הנפוצים והמסוכנים ביותר.
+            </p>
+        </div>
+        
+        <h3 class="subsection-title">למי מומלץ?</h3>
+        <ul class="facts-list">
+            <li><strong>כיתה ח׳:</strong> בנים ובנות - <span class="highlight">חיסון חינם במסגרת תוכנית החיסונים</span></li>
+            <li><strong>עד גיל 18:</strong> השלמת חיסון בחינם בלשכות משרד הבריאות (טלפון: *5400)</li>
+            <li><strong>גילאי 18-26:</strong> <span class="highlight">חדש! החיסון חינם בסל הבריאות החל מספטמבר 2025</span> - בעקבות שיעורי חיסון נמוכים (כ-55%) בבתי הספר</li>
+            <li><strong>מעל גיל 26:</strong> ניתן להתחסן בתשלום (שווה לשקול!)</li>
+        </ul>
+        
+        <div class="info-box">
+            <h4><span class="emoji-icon">💡</span> יתרון לגיל צעיר</h4>
+            <p>מתחסנים מתחת לגיל 15 צריכים רק <strong>שתי מנות</strong> במקום שלוש, כי התגובה החיסונית טובה יותר!</p>
+        </div>
+    </div>
+
+    <!-- לוח זמנים לחיסון -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">📅</span> לוח זמנים לחיסון</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-title">מנה ראשונה</div>
+                <div class="timeline-content">
+                    <p><strong>מתי:</strong> מיד לאחר קבלת החלטה להתחסן</p>
+                    <p><strong>פעולה:</strong> קביעת תור + בקשת מרשם מרופא המשפחה</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">מנה שנייה</div>
+                <div class="timeline-content">
+                    <p><strong>מתי:</strong> חודשיים (1-2 חודשים) לאחר המנה הראשונה</p>
+                    <p><strong>תזכורת:</strong> הגדירו תזכורת ב-Notion או ביומן שלכם</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">מנה שלישית (אם רלוונטי)</div>
+                <div class="timeline-content">
+                    <p><strong>מתי:</strong> 6 חודשים לאחר המנה הראשונה</p>
+                    <p><strong>שימו לב:</strong> רק למתחסנים מעל גיל 15</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warning-box">
+            <h4><span class="emoji-icon">⏰</span> חשוב לזכור</h4>
+            <p>חידוש מרשם נדרש לפני כל מנה! מומלץ לבקש מראש כדי להימנע מעיכובים.</p>
+        </div>
+    </div>
+
+    <!-- איפה להתחסן -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">🏥</span> איפה להתחסן? - קופות החולים</h2>
+        
+        <p>החיסון זמין בכל קופות החולים. להלן פרטי הקשר וקישורים לקביעת תור:</p>
+        
+        <div class="kupot-grid">
+            <div class="kupah-card">
+                <div class="kupah-name">כללית</div>
+                <div class="kupah-phone">☎️ 2700*</div>
+                <a href="https://www.clalit.co.il" class="kupah-link" target="_blank">אתר כללית</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">קביעת תור באפליקציה או באתר</p>
+            </div>
+            
+            <div class="kupah-card">
+                <div class="kupah-name">מכבי</div>
+                <div class="kupah-phone">☎️ 3555*</div>
+                <a href="https://www.maccabi4u.co.il" class="kupah-link" target="_blank">אתר מכבי</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">מערכת דיגיטלית לקביעת תורים</p>
+            </div>
+            
+            <div class="kupah-card">
+                <div class="kupah-name">מאוחדת</div>
+                <div class="kupah-phone">☎️ 3833*</div>
+                <a href="https://www.meuhedet.co.il" class="kupah-link" target="_blank">אתר מאוחדת</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">שירות זימון תורים אונליין</p>
+            </div>
+            
+            <div class="kupah-card">
+                <div class="kupah-name">לאומית</div>
+                <div class="kupah-phone">☎️ 507*</div>
+                <a href="https://www.leumit.co.il" class="kupah-link" target="_blank">אתר לאומית</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">מוקד ואפליקציה לתורים</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h4><span class="emoji-icon">📍</span> אפשרויות נוספות</h4>
+            <ul>
+                <li><strong>עד גיל 18:</strong> לשכות משרד הבריאות (טלפון *5400) - חיסון חינם</li>
+                <li><strong>חיילים:</strong> זמין דרך "ביקור רופא" בצה"ל (בתשלום, עם מרשם צבאי)</li>
+                <li><strong>בתי מרקחת פרטיים:</strong> ניתן לרכוש עם מרשם</li>
+            </ul>
+        </div>
+        
+        <div class="alert-box" style="margin-top: 25px;">
+            <h4><span class="emoji-icon">🏥</span> מרכז HPV באיכילוב - מידע, בדיקות וטיפול</h4>
+            <p><strong>מרכז ייחודי ראשון מסוגו בארץ</strong> למניעה, אבחון וטיפול בנגעים הקשורים ל-HPV בגברים ונשים.</p>
+            <p style="margin-top: 10px;">המרכז מתמחה במיוחד בבדיקות וטיפול בגברים, כולל גילוי מוקדם של נגעים בחלל הפה והלוע.</p>
+            <ul style="margin: 15px 0; margin-right: 20px;">
+                <li>📞 <strong>טלפון:</strong> 052-4262370</li>
+                <li>🌐 <strong>אתר:</strong> <a href="https://www.tasmc.org.il/unit-index-page/surgery/maxillo-facial/hpv-center/" target="_blank" style="color: #667eea;">מרכז HPV איכילוב</a></li>
+                <li>📍 <strong>מיקום:</strong> בית חולים איכילוב (סוראסקי), תל אביב</li>
+            </ul>
+            <p style="margin-top: 10px; font-weight: 600;">במרכז: בדיקות מקדימות, מעקב, טיפול בנגעים, מחקר וייעוץ</p>
+        </div>
+        
+        <div class="info-box" style="margin-top: 25px;">
+            <h4><span class="emoji-icon">🔬</span> בדיקות HPV בקופות החולים</h4>
+            <p>כל קופות החולים מציעות בדיקות לאיתור HPV במסגרת הסל הבריאותי:</p>
+            <ul style="margin: 15px 0; margin-right: 20px; line-height: 1.8;">
+                <li><strong>כללית:</strong> בדיקות HPV ומשטח צוואר הרחם במרפאות הנשים</li>
+                <li><strong>מכבי:</strong> בדיקות סקר לגילוי מוקדם - במרפאות או בדיקה עצמית ביתית (פיילוט)</li>
+                <li><strong>מאוחדת:</strong> בדיקות HPV עצמיות (פיילוט בירושלים, התרחבות ארצית בקרוב)</li>
+                <li><strong>לאומית:</strong> בדיקות סקר במרפאות הקופה</li>
+            </ul>
+            <p style="margin-top: 10px; font-size: 0.95em;">
+                💡 פנו לקופת החולים שלכם לקביעת תור לבדיקות או לקבלת מידע נוסף
+            </p>
+        </div>
+    </div>
+
+    <!-- טמפלייטים -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">📝</span> טמפלייטים לבקשות</h2>
+        
+        <div class="template-box">
+            <h4>📧 טמפלייט לבקשת מרשם ראשוני</h4>
+            <div class="template-text">שלום רב,
+
+אני מעוניין/ת להתחסן בחיסון HPV (גרדסיל 9) במסגרת סל הבריאות 2025.
+
+אבקש לקבל מרשם למנה הראשונה של החיסון.
+
+פרטי:
+- שם מלא: [השלימו]
+- תעודת זהות: [השלימו]
+- גיל: [השלימו]
+
+תודה רבה,
+[שמכם]</div>
+        </div>
+        
+        <div class="template-box">
+            <h4>📧 טמפלייט לחידוש מרשם (מנה שנייה/שלישית)</h4>
+            <div class="template-text">שלום רב,
+
+התחלתי את סדרת חיסוני HPV ביום [תאריך המנה הראשונה].
+
+אני מעוניין/ת לקבל מרשם למנה ה-[שנייה/שלישית] של החיסון.
+
+בהתאם ללוח הזמנים, המנה הבאה אמורה להינתן בסביבות [תאריך משוער].
+
+תודה רבה,
+[שמכם]</div>
+        </div>
+        
+        <div class="template-box">
+            <h4>📧 טמפלייט לקביעת תור לחיסון</h4>
+            <div class="template-text">שלום,
+
+אני מעוניין/ת לקבוע תור לחיסון HPV (גרדסיל 9).
+
+יש ברשותי מרשם בתוקף מרופא המשפחה.
+
+אנא עדכנוני במועדים הזמינים.
+
+תודה,
+[שמכם]</div>
+        </div>
+    </div>
+
+    <!-- תזכורות -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">⏰</span> מערכת תזכורות מומלצת</h2>
+        
+        <div class="success-box">
+            <h3>איך להגדיר תזכורות ב-Notion?</h3>
+            <ol style="margin-right: 20px; line-height: 2;">
+                <li>צרו דף חדש בשם "מעקב חיסון HPV"</li>
+                <li>הוסיפו טבלה עם העמודות הבאות:
+                    <ul style="margin-right: 20px;">
+                        <li>שם המנה</li>
+                        <li>תאריך מתוכנן</li>
+                        <li>תזכורת (Reminder)</li>
+                        <li>סטטוס (טרם בוצע / בוצע)</li>
+                    </ul>
+                </li>
+                <li>הגדירו תזכורות:
+                    <ul style="margin-right: 20px;">
+                        <li>שבוע לפני המועד - לבקש מרשם</li>
+                        <li>יום לפני - לקבוע תור</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        
+        <h3 class="subsection-title">דוגמת לוח זמנים:</h3>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <thead>
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 15px; border: 1px solid #ddd;">מנה</th>
+                    <th style="padding: 15px; border: 1px solid #ddd;">מועד</th>
+                    <th style="padding: 15px; border: 1px solid #ddd;">תזכורת מרשם</th>
+                    <th style="padding: 15px; border: 1px solid #ddd;">תזכורת תור</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold;">מנה 1</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">01/11/2025</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">25/10/2025</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">31/10/2025</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold;">מנה 2</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">01/01/2026</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">25/12/2025</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">31/12/2025</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold;">מנה 3*</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">01/05/2026</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">25/04/2026</td>
+                    <td style="padding: 15px; border: 1px solid #ddd;">30/04/2026</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.9em; color: #666;">* רק למתחסנים מעל גיל 15</p>
+    </div>
+
+    <!-- שאלות נפוצות -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">❓</span> שאלות נפוצות</h2>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">האם החיסון בטוח?</h3>
+            <p>כן! החיסון נבדק בקפדנות ומאושר לשימוש במדינות רבות בעולם. תופעות לוואי נדירות וקלות (כאב במקום הזריקה, חום קל).</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">האם קונדום מגן מפני HPV?</h3>
+            <div class="warning-box">
+                <p><strong>קונדום מפחית את הסיכון להידבקות ב-HPV, אבל לא מגן באופן מלא.</strong></p>
+                <p style="margin-top: 10px;">HPV יכול להימצא באזורי עור באזור המין שאינם מכוסים על ידי הקונדום. הנגיף מועבר במגע עור-בעור באזור האברים המיניים, ולא רק דרך נוזלי גוף.</p>
+                <p style="margin-top: 10px; font-weight: 600;">החיסון הוא הדרך היעילה והבטוחה ביותר להגנה מפני HPV!</p>
+                <p style="margin-top: 10px; font-size: 1em; padding: 15px; background: #fff3cd; border-radius: 6px;">
+                    <strong>⚠️ חשוב:</strong> החיסון מגן רק מפני HPV. <strong>עדיין חשוב להשתמש בקונדום</strong> למניעת מחלות מין אחרות (כמו כלמידיה, עגבת, HIV ועוד) ולמניעת הריון לא רצוי.
+                </p>
+            </div>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">האם יש צורך להתחסן אם כבר התחלתי להיות פעיל/ה מינית?</h3>
+            <p>כן! גם אם נחשפת ל-HPV בעבר, החיסון עדיין מגן מפני זנים נוספים שטרם נחשפת אליהם. קיימים 9 זנים שהחיסון מגן מפניהם, והסיכוי שנחשפת לכולם נמוך.</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">כמה עולה החיסון?</h3>
+            <ul class="facts-list">
+                <li><strong>עד גיל 18:</strong> חינם במסגרת תוכנית החיסונים או בלשכות משרד הבריאות (*5400)</li>
+                <li><strong>גילאי 18-26:</strong> <span class="highlight">חינם בסל הבריאות 2025!</span> (החל מספטמבר 2025)</li>
+                <li><strong>מעל גיל 26:</strong> תשלום פרטי - המחיר משתנה בהתאם לקופת החולים ובית המרקחת</li>
+            </ul>
+            <p style="margin-top: 15px; font-size: 0.95em; color: #555;">
+                💡 <strong>רוצים בדיקות או ייעוץ?</strong> מרכז HPV באיכילוב מציע בדיקות ומעקב במסגרת הסל הבריאותי<br>
+                📞 052-4262370
+            </p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">מה קורה אם פיספסתי מנה?</h3>
+            <div class="success-box">
+                <p><strong>אין צורך להתחיל מחדש!</strong> אם פיספסת מנה, פשוט קבעו את המנה הבאה ברצף והמשיכו מהמקום בו עצרתם.</p>
+                <p style="margin-top: 10px;">מחקרים מראים שעיכוב במתן המנות לא פוגע ביעילות החיסון - ואף עשוי לשפר את התגובה החיסונית! החשוב הוא להשלים את הסדרה.</p>
+                <p style="margin-top: 10px; font-weight: 600;">התייעצו עם הרופא שלכם לגבי לוח הזמנים המתאים להמשך.</p>
+            </div>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3 class="subsection-title">האם גברים באמת צריכים להתחסן?</h3>
+            <div class="alert-box">
+                <p><strong>בהחלט כן!</strong> גברים יכולים לחלות בסרטן הלוע והפה (הנפוץ ביותר!), סרטן פי הטבעת והפין עקב HPV. בנוסף, החיסון מגן על בני/בנות הזוג שלהם.</p>
+                <p style="margin-top: 15px;"><strong>שיעורי ההידבקות (מחקר עולמי 2023):</strong></p>
+                <ul style="margin-right: 20px; margin-top: 10px;">
+                    <li><strong>1 מתוך 3 גברים בעולם (31%)</strong> נדבקים ב-HPV במהלך חייהם</li>
+                    <li><strong>1 מתוך 5 גברים (21%)</strong> נדבקים בזני HPV בסיכון גבוה לסרטן</li>
+                    <li>השכיחות הגבוהה ביותר בגילאי 25-29, אבל נשארת גבוהה לאורך כל החיים</li>
+                    <li>גברים שמקיימים יחסי מין עם גברים נמצאים בסיכון מוגבר במיוחד לסרטן פי הטבעת והלוע</li>
+                    <li><strong>חשוב:</strong> קונדום לא מגן באופן מלא מפני HPV - החיסון הוא ההגנה הטובה ביותר!</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600; font-size: 1.05em;">זה לא רק עניין אישי - זו גם אחריות חברתית. החיסון מגן עליך ועל הסובבים אותך.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- מקורות מידע -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">📚</span> מקורות מידע ומשאבים נוספים</h2>
+        
+        <p style="margin-bottom: 20px;">כל המידע בדף זה מבוסס על מקורות רפואיים מהימנים ועדכניים:</p>
+        
+        <div class="info-box">
+            <h4><span class="emoji-icon">🏥</span> מקורות רפואיים ישראליים</h4>
+            <ul style="line-height: 2; margin-right: 20px;">
+                <li><strong>מרכז HPV באיכילוב:</strong> מרכז ייחודי למניעה, אבחון וטיפול<br>
+                    🌐 <a href="https://www.tasmc.org.il/unit-index-page/surgery/maxillo-facial/hpv-center/" target="_blank" style="color: #667eea;">https://www.tasmc.org.il/hpv-center</a><br>
+                    📞 052-4262370
+                </li>
+                <li><strong>משרד הבריאות - תוכנית החיסונים:</strong><br>
+                    🌐 <a href="https://www.health.gov.il" target="_blank" style="color: #667eea;">www.health.gov.il</a><br>
+                    📞 לשכות משרד הבריאות: *5400
+                </li>
+                <li><strong>התנועה לחופש המידע - נתוני התחסנות HPV בישראל:</strong><br>
+                    נתונים שנחשפו בעקבות עתירה: רק 55% מהתלמידים מתחסנים נגד HPV<br>
+                    🌐 <a href="https://www.meida.org.il/16427" target="_blank" style="color: #667eea;">נתוני התחסנות לפי יישובים</a>
+                </li>
+                <li><strong>סל הבריאות 2025:</strong> הרחבת חיסון HPV לגילאי 18-26<br>
+                    החל מספטמבר 2025 - בעקבות שיעורי החיסון הנמוכים
+                </li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h4><span class="emoji-icon">🌍</span> מקורות בינלאומיים</h4>
+            <ul style="line-height: 2; margin-right: 20px;">
+                <li><strong>National Cancer Institute (NCI) - ארה"ב:</strong><br>
+                    מידע מקיף על HPV וסרטן מהמכון הלאומי לסרטן<br>
+                    🌐 <a href="https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-and-cancer" target="_blank" style="color: #667eea;">HPV and Cancer - NCI</a>
+                </li>
+                <li><strong>ארגון הבריאות העולמי (WHO):</strong><br>
+                    מידע על HPV, סרטן והחיסון<br>
+                    🌐 <a href="https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer" target="_blank" style="color: #667eea;">WHO - HPV and Cancer</a>
+                </li>
+                <li><strong>CDC (Centers for Disease Control):</strong><br>
+                    הנחיות על חיסון HPV ולוחות זמנים<br>
+                    🌐 <a href="https://www.cdc.gov/vaccines/vpd/hpv/" target="_blank" style="color: #667eea;">CDC - HPV Vaccination</a>
+                </li>
+                <li><strong>The Lancet Global Health (2023):</strong><br>
+                    מחקר עולמי על שכיחות HPV בגברים - מטה-אנליזה של 65 מחקרים מ-35 מדינות<br>
+                    נתונים: 1 מתוך 3 גברים (31%) נדבקים ב-HPV | 1 מתוך 5 גברים (21%) נדבקים בזני HPV בסיכון גבוה<br>
+                    🌐 <a href="https://www.thelancet.com/journals/langlo/article/PIIS2214109X(23)00305-4/fulltext" target="_blank" style="color: #667eea;">Lancet Global Health - HPV in Men</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h4><span class="emoji-icon">🏥</span> קופות חולים - מידע על החיסון</h4>
+            <ul style="line-height: 2; margin-right: 20px;">
+                <li><strong>כללית:</strong> 
+                    🌐 <a href="https://www.clalit.co.il/he/myrights/vaccines/Pages/papilloma-vaccine.aspx" target="_blank" style="color: #667eea;">מידע על חיסון גרדסיל 9</a>
+                </li>
+                <li><strong>מכבי:</strong> 
+                    🌐 <a href="https://www.maccabi4u.co.il/15353-he/Maccabi.aspx" target="_blank" style="color: #667eea;">נגיף הפפילומה HPV</a>
+                </li>
+                <li><strong>מאוחדת:</strong> 
+                    🌐 <a href="https://www.meuhedet.co.il" target="_blank" style="color: #667eea;">www.meuhedet.co.il</a> - חיפוש "חיסון HPV"
+                </li>
+                <li><strong>לאומית:</strong> 
+                    🌐 <a href="https://www.leumit.co.il/heb/Life/FamilyHealth/familyhealth/articlegalleryitem,5165/" target="_blank" style="color: #667eea;">על בריאות המשפחה - פפילומה</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="success-box">
+            <h4><span class="emoji-icon">✨</span> נתונים עיקריים מהמקורות</h4>
+            <ul style="line-height: 2; margin-right: 20px;">
+                <li>🔬 קיימים למעלה מ-200 זני HPV, 12 מהם "סיכון גבוה" לסרטן (NCI)</li>
+                <li>👥 כמעט כל האנשים הפעילים מינית נחשפים ל-HPV בתוך חודשים עד שנתיים מהתחלת הפעילות המינית (NCI)</li>
+                <li>👨 <strong>1 מתוך 3 גברים בעולם (31%) נדבקים ב-HPV</strong> (Lancet Global Health, 2023)</li>
+                <li>👨 <strong>1 מתוך 5 גברים (21%) נדבקים בזני HPV בסיכון גבוה</strong> (Lancet Global Health, 2023)</li>
+                <li>💉 גרדסיל 9 מגן מפני 9 זנים - כולל 7 זנים שגורמים לרוב סוגי הסרטן הקשורים ב-HPV (NCI)</li>
+                <li>🎯 החיסון מונע עד 90% מהסרטנים הנגרמים על ידי HPV (NCI)</li>
+                <li>⚠️ היום יש גברים צעירים (בסביבות גיל 30) ונשים צעירות שחולים בסרטן בעקבות HPV - אל תחכו!</li>
+                <li>🇮🇱 בישראל: חיסון חינם עד גיל 26 (החל מספטמבר 2025)</li>
+                <li>📊 שיעורי חיסון בישראל: כ-55% בבתי ספר (לכן הורחב לגילאי 18-26)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- סיכום -->
+    <div class="section">
+        <h2 class="section-title"><span class="emoji-icon">🎯</span> סיכום - צעדים לפעולה</h2>
+        
+        <div class="button-group">
+            <a href="#" class="btn btn-primary">1️⃣ דברו עם רופא המשפחה</a>
+            <a href="#" class="btn btn-primary">2️⃣ קבלו מרשם</a>
+            <a href="#" class="btn btn-primary">3️⃣ קבעו תור בקופה</a>
+        </div>
+        
+        <div class="info-box" style="margin-top: 25px;">
+            <h4><span class="emoji-icon">📅</span> הגדירו תזכורת בטלפון - חשוב!</h4>
+            <p style="margin-bottom: 15px;"><strong>החיסון דורש 2-3 מנות.</strong> כדי שלא תשכחו, לחצו על הכפתור להוספה אוטומטית ללוח השנה:</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <button id="addToCalendar" class="btn btn-primary" style="font-size: 1.1em; padding: 15px 30px; cursor: pointer; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+                    📅 הוסיפו תזכורת ללוח השנה שלי
+                </button>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <p style="font-weight: 600; margin-bottom: 10px;">💡 מה יקרה כשתלחצו:</p>
+                <ul style="margin-right: 20px; line-height: 1.8;">
+                    <li>ייפתח לוח השנה בטלפון שלכם אוטומטית</li>
+                    <li>האירוע יהיה מוכן עם כל הפרטים: "מנה שנייה - חיסון HPV"</li>
+                    <li>התאריך יהיה <strong>6 חודשים מהיום</strong> (או 2 חודשים אם אתם מתחת לגיל 15)</li>
+                    <li>עם תזכורת שבוע לפני ויום לפני</li>
+                    <li>רק צריך ללחוץ "שמור" ✅</li>
+                </ul>
+            </div>
+            
+            <p style="margin-top: 15px; font-size: 0.95em; color: #666;">
+                💡 <strong>טיפ:</strong> אפשר גם לבקש מרופא המשפחה או מהאחות בקופה לשלוח לכם SMS תזכורת
+            </p>
+        </div>
+
+        <script>
+        document.getElementById('addToCalendar').addEventListener('click', function() {
+            // חישוב תאריך - 6 חודשים מהיום
+            const now = new Date();
+            const sixMonthsLater = new Date(now);
+            sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
+            
+            // פורמט תאריך ל-ICS (YYYYMMDD)
+            const formatDate = (date) => {
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                return year + month + day;
+            };
+            
+            const startDate = formatDate(sixMonthsLater);
+            const endDate = startDate; // אירוע של יום שלם
+            
+            // יצירת קישור Google Calendar
+            const title = encodeURIComponent('מנה שנייה - חיסון HPV');
+            const details = encodeURIComponent('זמן לקבוע תור למנה השנייה של חיסון HPV. התקשרו לקופת החולים או הזמינו תור באתר.');
+            const location = encodeURIComponent('קופת החולים');
+            
+            // בניית URL עבור Google Calendar
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}&sf=true&output=xml`;
+            
+            // פתיחת לוח השנה
+            window.open(googleCalendarUrl, '_blank');
+            
+            // הצגת הודעה
+            alert('לוח השנה נפתח! שמרו את האירוע כדי לקבל תזכורת 📅✅');
+        });
+        </script>
+        
+        <div class="success-box" style="margin-top: 30px;">
+            <h3><span class="emoji-icon">💪</span> זכרו!</h3>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                חיסון HPV הוא אחד הכלים החשובים ביותר למניעת סרטן. זה לא רק עבורכם - זה גם הגנה על אנשים אחרים סביבכם. 
+                <strong>התחסנות היא מעשה של אחריות אישית וחברתית.</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- פוטר -->
+    <div style="text-align: center; margin-top: 50px; padding: 30px; background: #f7f6f3; border-radius: 8px;">
+        <p style="font-size: 0.9em; color: #666; line-height: 1.8;">
+            <strong>מידע זה הוא למטרות הסברה בלבד ואינו מהווה ייעוץ רפואי.</strong><br>
+            יש להתייעץ עם רופא לפני קבלת החלטות רפואיות.<br>
+            המידע עודכן לאחרונה: אוקטובר 2025
+        </p>
+        <p style="margin-top: 20px; font-size: 1.1em;">
+            💜 בריאות טובה לכולנו! 💜
+        </p>
+    </div>
+</body>
+</html>
